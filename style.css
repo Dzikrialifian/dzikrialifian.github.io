@@ -1,0 +1,241 @@
+/* style.css */
+
+/* Custom Font (Poppins) */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Custom Colors */
+:root {
+  --dzikri-green: #2ecc71;
+  --dzikri-emerald-dark: #27ae60;
+  --dzikri-dark-blue: #34495e;
+  --dzikri-red: #e74c3c;
+}
+
+/* Main Container - Full screen dan shadow */
+.main-container {
+  height: 100vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Background Shape (Hijau Melengkung) */
+.background-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%; /* Sesuaikan lebar */
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    var(--dzikri-green),
+    var(--dzikri-emerald-dark)
+  );
+  transform: skewY(-12deg) translateX(-25%); /* Kemiringan dan geser */
+  transform-origin: top left;
+  z-index: 1; /* Di bawah konten utama */
+}
+
+/* Header Text */
+header h1 {
+  position: relative;
+  z-index: 3;
+  color: var(--bs-dark);
+}
+
+/* Portfolio Book Container */
+.portfolio-book {
+  width: 256px;
+  height: 320px;
+}
+@media (min-width: 768px) {
+  /* md */
+  .portfolio-book {
+    width: 288px;
+    height: 384px;
+  }
+}
+@media (min-width: 992px) {
+  /* lg */
+  .portfolio-book {
+    width: 320px;
+    height: 416px;
+  }
+}
+
+/* Book Spine (Punggung Buku) */
+.book-spine {
+  width: 16px;
+}
+
+/* Photo Container */
+.photo-container {
+  width: 192px;
+  height: 192px;
+  border-color: var(--dzikri-red) !important;
+}
+@media (min-width: 768px) {
+  /* md */
+  .photo-container {
+    width: 224px;
+    height: 224px;
+  }
+}
+
+/* Teks "MY PORTOFOLIO" */
+.portfolio-book h2 {
+  position: relative;
+  z-index: 4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================= */
+/* NAVIGASI FLOATING - KUNCI PERUBAHAN INI */
+/* ========================================= */
+
+/* Kelas untuk kondisi awal navigasi (default mobile: bawah, desktop: kanan) */
+.nav-floating-initial {
+  /* Default untuk mobile (layar kecil): di bawah, horizontal */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 0; /* Memberi ruang di sekitar tombol */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Sedikit transparan agar terlihat floating */
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out; /* Transisi saat berubah posisi */
+  display: flex; /* Menggunakan flexbox untuk item di dalamnya */
+  justify-content: center; /* Memusatkan item secara horizontal */
+  align-items: center;
+}
+/* Untuk ul di dalamnya */
+.nav-floating-initial ul {
+  width: 100%; /* Agar ul mengisi lebar nav */
+  justify-content: center; /* Memusatkan item ul */
+  flex-wrap: wrap; /* Biarkan item navigasi pecah baris jika tidak cukup */
+  gap: 0.75rem; /* Jarak antar tombol (sekitar 12px) */
+}
+
+/* Media Query untuk Layar Besar (md dan di atasnya): Navigasi ke kanan, vertikal */
+@media (min-width: 768px) {
+  /* md breakpoint Bootstrap */
+  .nav-floating-initial {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.5rem; /* Posisi dari kanan */
+    left: auto; /* Pastikan tidak ada konflik dengan left:0 */
+    bottom: auto; /* Pastikan tidak ada konflik dengan bottom:0 */
+    padding: 0; /* Hapus padding bawah */
+    background-color: transparent; /* Transparan karena sudah ada background di tombol */
+    box-shadow: none; /* Hapus shadow background nav */
+    display: block; /* Kembalikan ke block untuk positioning vertical */
+  }
+  .nav-floating-initial ul {
+    flex-direction: column; /* Vertikal */
+    gap: 1rem; /* Jarak antar tombol (sekitar 16px) */
+    width: auto; /* Lebar otomatis */
+  }
+}
+
+/* Kondisi Navigasi "Halaman Berikutnya" (akan diaktifkan oleh JS) */
+.nav-next-page-state {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-next-page-state ul {
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap; /* Pastikan tetap responsif */
+  gap: 0.75rem; /* Jarak antar tombol */
+}
+
+/* Tombol Navigasi Kustom */
+.nav-button {
+  background-color: var(--dzikri-dark-blue) !important;
+  border-color: var(--dzikri-dark-blue) !important;
+  border-radius: 2rem !important;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.nav-button:hover {
+  background-color: #2c3e50 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.nav-button:active {
+  transform: translateY(0);
+}
+@media (min-width: 768px) {
+  /* md */
+  .nav-button {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes pulseShadow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+.animate-slideInLeft {
+  animation: slideInLeft 1s ease-out forwards;
+}
+.animate-slideInRight {
+  animation: slideInRight 1s ease-out forwards;
+}
+.animate-pulseShadow {
+  animation: pulseShadow 2s infinite ease-in-out;
+}
