@@ -2,155 +2,415 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
     <title>Portofolio Dzikri Alifian</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body
-    class="font-poppins d-flex align-items-center justify-content-center vh-100 overflow-hidden bg-light"
-  >
-    <div
-      class="main-container position-relative w-100 h-100 bg-white d-flex flex-column overflow-hidden"
-    >
+  <body>
+    <div class="main-container">
       <div class="background-shape"></div>
-
-      <div
-        class="content-wrapper position-relative z-2 d-flex flex-column justify-content-between align-items-center p-3 p-md-4 p-lg-5 flex-grow-1"
-      >
+      <section class="home-content section-home" id="home-section">
+        <div class="background-hitech"></div>
         <header class="text-center py-3 py-md-4 w-100 animate-fadeIn">
-          <h1 class="display-6 fw-bold text-dark text-nowrap">
+          <h1 class="home-title fw-bold text-dark mb-4">
             SELAMAT DATANG DI PORTAL SAYA
           </h1>
         </header>
-
-        <main
-          class="d-flex flex-grow-1 flex-column flex-md-row align-items-center justify-content-center gap-4 gap-md-5 gap-lg-6 w-100"
-        >
-          <div
-            class="portfolio-book position-relative bg-danger rounded shadow-lg overflow-hidden d-flex align-items-center justify-content-center animate-slideInLeft"
+        <div class="diary-realistic mx-auto my-4 position-relative">
+          <div class="diary-cover"></div>
+          <div class="diary-pages"></div>
+          <button
+            class="diary-photo-circle-btn"
+            id="profilePhotoBtn"
+            aria-label="Buka menu profil"
           >
-            <div
-              class="book-spine position-absolute end-0 h-100 bg-warning rounded-end"
-            ></div>
-            <div
-              class="photo-container position-relative bg-secondary rounded-circle border border-5 border-dzikri-red d-flex align-items-center justify-content-center overflow-hidden animate-pulseShadow"
-            >
-              <img
-                src="foto2.jpg"
-                alt="Foto Profil Dzikri Alifian"
-                class="w-100 h-100 object-fit-cover rounded-circle"
-              />
-            </div>
-            <div
-              class="position-absolute bottom-0 start-0 end-0 text-center pb-3"
-            >
-              <h2 class="text-white fs-3 fs-md-2 fw-bold text-nowrap">
-                MY PORTOFOLIO
-              </h2>
+            <span class="diary-photo-circle">
+              <img src="foto2.jpg" alt="Foto Profil Dzikri Alifian" />
+            </span>
+          </button>
+          <div class="diary-binding"></div>
+          <div class="diary-bookmark"></div>
+        </div>
+        <div class="mt-4">
+          <h2 class="text-danger fs-3 fw-bold text-nowrap text-center mb-2">
+            MY PORTOFOLIO
+          </h2>
+          <p class="text-center fs-5 mb-0 text-home-hint">
+            Klik foto saya untuk lebih detail
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="profile-section"
+        class="content-section section-profile d-none"
+      >
+        <div class="container py-5 content-wrapper">
+          <div class="card section-frame mx-auto">
+            <div class="card-body">
+              <h2 class="text-dark-blue mb-4 text-center">Profil Saya</h2>
+              <ul class="list-unstyled text-dark-blue fs-5">
+                <li>
+                  <strong class="text-dark">Nama Lengkap:</strong> M. Dzikri
+                  Alifian NE
+                </li>
+                <li>
+                  <strong class="text-dark">Nama Panggilan:</strong> Dzikri
+                </li>
+                <li>
+                  <strong class="text-dark">Usia:</strong> [Isi Usia Anda]
+                </li>
+                <li>
+                  <strong class="text-dark">Domisili:</strong> [Isi Domisili
+                  Anda]
+                </li>
+                <li>
+                  <strong class="text-dark">Hobi:</strong> [Isi Hobi Anda]
+                </li>
+                <li>
+                  <strong class="text-dark">Deskripsi Singkat:</strong> Seorang
+                  web developer yang antusias dengan fokus pada pengembangan
+                  antarmuka pengguna yang intuitif dan responsif.
+                </li>
+              </ul>
             </div>
           </div>
-        </main>
+        </div>
+      </section>
 
-        <nav
-          id="main-nav"
-          class="nav-floating-initial position-fixed z-3 animate-slideInRight"
-        >
-          <ul class="list-unstyled mb-0 d-flex">
-            <li>
-              <a href="#" class="nav-button btn btn-dark" data-page="home"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a href="#" class="nav-button btn btn-dark" data-page="profile"
-                >Profile</a
-              >
-            </li>
-            <li>
-              <a href="#" class="nav-button btn btn-dark" data-page="education"
-                >Education</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="nav-button btn btn-dark"
-                data-page="organization"
-                >Organization</a
-              >
-            </li>
-          </ul>
-        </nav>
+      <section
+        id="education-section"
+        class="content-section section-education d-none"
+      >
+        <div class="container py-5 content-wrapper">
+          <div class="card section-frame mx-auto">
+            <div class="card-body">
+              <h2 class="text-dark-blue mb-4 text-center">
+                Riwayat Pendidikan
+              </h2>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <h3 class="timeline-title">Universitas [Nama Universitas]</h3>
+                  <p class="timeline-date">2020 - 2024</p>
+                  <p class="timeline-description">
+                    Sarjana Komputer - Teknik Informatika
+                  </p>
+                </div>
+                <div class="timeline-item">
+                  <h3 class="timeline-title">SMA [Nama SMA]</h3>
+                  <p class="timeline-date">2017 - 2020</p>
+                  <p class="timeline-description">
+                    Jurusan Ilmu Pengetahuan Alam
+                  </p>
+                </div>
+                <div class="timeline-item">
+                  <h3 class="timeline-title">SMP [Nama SMP]</h3>
+                  <p class="timeline-date">2014 - 2017</p>
+                </div>
+                <div class="timeline-item">
+                  <h3 class="timeline-title">SD [Nama SD]</h3>
+                  <p class="timeline-date">2008 - 2014</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <footer
-          class="text-secondary text-center fs-6 fs-md-7 w-100 py-3 animate-fadeIn"
-        >
-          M Dzikri Alifian NE #MyPortofolio, 2025
-        </footer>
+      <section
+        id="organization-section"
+        class="content-section section-organization d-none"
+      >
+        <div class="container py-5 content-wrapper">
+          <div class="card section-frame mx-auto">
+            <div class="card-body">
+              <h2 class="text-dark-blue mb-4 text-center">
+                Pengalaman & Organisasi
+              </h2>
+              <div class="experience-item mb-4">
+                <h3 class="experience-title">
+                  Web Developer - PT. [Nama Perusahaan]
+                </h3>
+                <p class="experience-date">Januari 2024 - Sekarang</p>
+                <ul class="experience-description">
+                  <li>
+                    Mengembangkan dan memelihara aplikasi web menggunakan
+                    [Teknologi, misal: React, Node.js].
+                  </li>
+                  <li>
+                    Berkolaborasi dengan tim desain untuk mengimplementasikan
+                    antarmuka pengguna yang responsif.
+                  </li>
+                  <li>[Tambahkan poin-poin lain]</li>
+                </ul>
+              </div>
+              <div class="experience-item mb-4">
+                <h3 class="experience-title">
+                  Staf Divisi IT - [Nama Organisasi Kampus/Lainnya]
+                </h3>
+                <p class="experience-date">September 2021 - Agustus 2022</p>
+                <ul class="experience-description">
+                  <li>
+                    Bertanggung jawab atas pengelolaan infrastruktur jaringan
+                    dan website organisasi.
+                  </li>
+                  <li>
+                    Memberikan dukungan teknis untuk acara-acara organisasi.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <button
-          id="nextPageButton"
-          class="btn btn-primary position-absolute bottom-0 start-50 translate-middle-x my-3 z-3 shadow animate-fadeIn"
+      <section
+        id="competency-section"
+        class="content-section section-competency d-none"
+      >
+        <div class="container py-5 content-wrapper">
+          <div class="card section-frame mx-auto">
+            <div class="card-body">
+              <h2 class="text-dark-blue mb-4 text-center">
+                Kompetensi Keahlian
+              </h2>
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <h4 class="card-title text-primary">
+                        <i class="material-icons me-2">code</i> Frontend
+                        Development
+                      </h4>
+                      <p class="card-text">
+                        HTML5, CSS3 (Sass/Less), JavaScript (ES6+), React.js,
+                        Vue.js, Bootstrap, Tailwind CSS, Responsive Design.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <h4 class="card-title text-success">
+                        <i class="material-icons me-2">storage</i> Backend
+                        Development
+                      </h4>
+                      <p class="card-text">
+                        Node.js (Express.js), Python (Django/Flask), PHP
+                        (Laravel), RESTful APIs, MySQL, PostgreSQL, MongoDB.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <h4 class="card-title text-info">
+                        <i class="material-icons me-2">build</i> Tools & Lainnya
+                      </h4>
+                      <p class="card-text">
+                        Git, GitHub, VS Code, npm/yarn, Webpack, Figma (basic),
+                        SEO, Web Performance Optimization.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                      <h4 class="card-title text-warning">
+                        <i class="material-icons me-2">language</i> Bahasa
+                      </h4>
+                      <p class="card-text">
+                        Bahasa Indonesia (Native), Bahasa Inggris
+                        (Intermediate).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav
+        id="floating-nav"
+        class="floating-nav d-none"
+        aria-label="Navigasi utama"
+      >
+        <ul class="nav-list">
+          <li>
+            <a
+              href="#home-section"
+              class="nav-btn"
+              data-target="home-section"
+              aria-label="Home"
+            >
+              <i class="material-icons">home</i>
+              <span class="nav-text">Home</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#profile-section"
+              class="nav-btn"
+              data-target="profile-section"
+              aria-label="Profil"
+            >
+              <i class="material-icons">person</i>
+              <span class="nav-text">Profil</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#education-section"
+              class="nav-btn"
+              data-target="education-section"
+              aria-label="Edukasi"
+            >
+              <i class="material-icons">school</i>
+              <span class="nav-text">Edukasi</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#organization-section"
+              class="nav-btn"
+              data-target="organization-section"
+              aria-label="Organisasi"
+            >
+              <i class="material-icons">business_center</i>
+              <span class="nav-text">Organisasi</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#competency-section"
+              class="nav-btn"
+              data-target="competency-section"
+              aria-label="Kompetensi"
+            >
+              <i class="material-icons">star_rate</i>
+              <span class="nav-text">Kompetensi</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <footer class="footer-sticky text-secondary text-center">
+        Dzikri Alifian &copy; 2025
+        <a
+          href="https://instagram.com/_.dzikri.alifian._"
+          target="_blank"
+          rel="noopener"
+          class="footer-ig"
         >
-          Simulasi Halaman Berikutnya
-        </button>
-      </div>
+          <span class="footer-ig-icon" aria-hidden="true">
+            <!-- Instagram SVG gradient logo -->
+            <svg
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1.3em"
+              height="1.3em"
+              aria-label="Instagram Logo"
+            >
+              <defs>
+                <radialGradient
+                  id="ig-gradient"
+                  cx="30%"
+                  cy="107%"
+                  r="150%"
+                  fx="30%"
+                  fy="107%"
+                >
+                  <stop offset="0%" stop-color="#fdf497" />
+                  <stop offset="5%" stop-color="#fdf497" />
+                  <stop offset="45%" stop-color="#fd5949" />
+                  <stop offset="60%" stop-color="#d6249f" />
+                  <stop offset="90%" stop-color="#285AEB" />
+                </radialGradient>
+              </defs>
+              <rect
+                x="0"
+                y="0"
+                width="448"
+                height="512"
+                rx="100"
+                fill="url(#ig-gradient)"
+              />
+              <path
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9
+              114.9-51.3 114.9-114.9S287.7 141 224.1 141zm0 186.6c-39.6 0-71.7-32.1-71.7-71.7
+              0-39.6 32.1-71.7 71.7-71.7 39.6 0 71.7 32.1 71.7 71.7 0 39.6-32.1 71.7-71.7 71.7zm146.4-194.3
+              c0 14.9-12.1 27-27 27-14.9 0-27-12.1-27-27 0-14.9 12.1-27 27-27 14.9 0 27 12.1 27 27zm76.1
+              27.2c-1.7-35.3-9.9-66.7-36.2-92.9C398.8 9.9 367.4 1.7 332.1 0 295.7-1.7 152.3-1.7 115.9
+              0 80.6 1.7 49.2 9.9 23 36.2 9.9 49.2 1.7 80.6 0 115.9c-1.7 36.4-1.7 179.8 0 216.2 1.7
+              35.3 9.9 66.7 36.2 92.9 27.1 27.1 61.9 34.5 97.2 36.2 36.4 1.7 179.8 1.7 216.2 0 35.3-1.7
+              66.7-9.9 92.9-36.2 27.1-27.1 34.5-61.9 36.2-97.2 1.7-36.4 1.7-179.8 0-216.2zm-48.5
+              260.5c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.7-99.2 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.5-42.5-11.7-29.4-9-99.2-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.5-42.5C99.3 38.1 169.1 40.8 202 40.8s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.5 42.5 11.7 29.4 9 99.2 9 132.1s2.7 102.7-9 132.1z"
+                fill="#fff"
+              />
+            </svg>
+          </span>
+          <span>@_.dzikri.alifian._</span>
+        </a>
+      </footer>
     </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eJ7Rz7wDgm5U3FwJmR2Z"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const mainNav = document.getElementById("main-nav");
-        const navList = mainNav.querySelector("ul");
-        const nextPageButton = document.getElementById("nextPageButton");
+      // Function to show a specific section and hide others
+      function showSection(sectionId) {
+        const sections = document.querySelectorAll(
+          ".content-section, #home-section"
+        );
+        sections.forEach((section) => {
+          if (section.id === sectionId) {
+            section.classList.remove("d-none");
+          } else {
+            section.classList.add("d-none");
+          }
+        });
 
-        // Fungsi untuk mengubah navigasi ke posisi horizontal di bawah
-        function switchToNextPageNav() {
-          // Hapus kelas 'nav-floating-initial' yang mengatur posisi awal
-          mainNav.classList.remove("nav-floating-initial");
-
-          // Tambahkan kelas kondisi "halaman berikutnya" (horizontal di bawah untuk semua ukuran layar)
-          // Ini akan menggantikan perilaku default nav-floating-initial pada layar besar/kecil
-          mainNav.classList.add("nav-next-page-state");
-
-          // Hapus tombol simulasi
-          nextPageButton.classList.add("d-none");
-
-          console.log(
-            "Navigasi telah berpindah ke posisi horizontal di bawah."
-          );
-          // Di aplikasi nyata, Anda akan memuat konten halaman baru di sini.
+        // Toggle visibility of floating navigation
+        const floatingNav = document.getElementById("floating-nav");
+        if (sectionId === "home-section") {
+          floatingNav.classList.add("d-none");
+        } else {
+          floatingNav.classList.remove("d-none");
         }
+      }
 
-        // Event listener untuk tombol simulasi
-        nextPageButton.addEventListener("click", switchToNextPageNav);
+      // Event listener for the initial profile button (on home page)
+      const profileBtn = document.getElementById("profilePhotoBtn");
+      if (profileBtn) {
+        profileBtn.addEventListener("click", function () {
+          showSection("profile-section");
+        });
+      }
 
-        // Event listener untuk tombol navigasi (opsional, jika ingin juga memicu perubahan nav)
-        const navButtons = document.querySelectorAll(".nav-button");
-        navButtons.forEach((button) => {
-          button.addEventListener("click", (e) => {
-            e.preventDefault();
-            const page = e.target.dataset.page;
-            console.log(`Navigasi ke halaman: ${page}`);
-            // Jika mengklik tombol nav juga harus memicu perubahan posisi nav:
-            // switchToNextPageNav();
-          });
+      // Event listeners for floating navigation buttons
+      document.querySelectorAll(".nav-btn").forEach((button) => {
+        button.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default anchor link behavior
+          const targetSectionId = this.dataset.target;
+          showSection(targetSectionId);
         });
       });
     </script>
