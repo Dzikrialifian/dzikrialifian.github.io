@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
     />
     <title>Portofolio Dzikri Alifian</title>
     <link
@@ -412,6 +412,13 @@
           const targetSectionId = this.dataset.target;
           showSection(targetSectionId);
         });
+      });
+
+      // Trik: Scroll sedikit untuk mempercepat address bar menghilang di mobile (optional)
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          if (window.scrollY < 2) window.scrollTo(0, 1);
+        }, 100);
       });
     </script>
   </body>

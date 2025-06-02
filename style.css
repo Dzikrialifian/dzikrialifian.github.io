@@ -1,7 +1,8 @@
 html,
-body {
-  height: 100%;
-  width: 100vw;
+body,
+.main-container {
+  min-height: 100dvh;
+  height: 100dvh;
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -9,12 +10,12 @@ body {
   overflow: auto;
 }
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   min-width: 100vw;
 }
 .main-container {
   position: relative;
-  min-height: 100vh;
+  min-height: 100dvh;
   min-width: 100vw;
   width: 100vw;
   display: flex;
@@ -35,7 +36,6 @@ body {
   opacity: 0.14;
   z-index: 2;
 }
-
 .background-hitech {
   position: absolute;
   inset: 0;
@@ -43,8 +43,7 @@ body {
   height: 100%;
   z-index: 1;
   pointer-events: none;
-  background: url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80")
-    center center / cover no-repeat;
+  background: url("backgrond.avif") center center / cover no-repeat;
   opacity: 0.54;
   filter: brightness(0.75);
 }
@@ -62,18 +61,6 @@ body {
   min-width: 0;
   box-sizing: border-box;
   overflow: hidden;
-}
-
-.section-home {
-  /* Style khusus home jika ingin */
-  .section-home {
-    background: linear-gradient(120deg, #f8fafc 60%, #e3f0ff 100%);
-    box-shadow: 0 4px 32px rgba(49, 122, 252, 0.07);
-    border-radius: 24px;
-    padding: 32px 0;
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
 }
 
 /* Responsive one-line title */
@@ -208,53 +195,58 @@ body {
 }
 
 /* --- Content Sections Styling --- */
-.content-section {
+.content-section,
+.section-home {
   position: absolute;
   inset: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100dvh;
+  height: 100dvh;
   z-index: 5;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow-y: auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: calc(60px + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition: background-image 0.5s ease-in-out;
+  box-sizing: border-box;
 }
 
 /* Section-specific background images with Unsplash */
 .section-profile {
   background: linear-gradient(
-      rgba(255, 255, 255, 0.45),
-      rgba(255, 255, 255, 0.45)
+      rgba(255, 255, 255, 0.65),
+      rgba(255, 255, 255, 0.65)
     ),
-    url("https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=1400&q=80");
+    url("profil.avif") no-repeat center center / cover;
 }
 .section-education {
   background: linear-gradient(
-      rgba(255, 255, 255, 0.45),
-      rgba(255, 255, 255, 0.45)
+      rgba(255, 255, 255, 0.65),
+      rgba(255, 255, 255, 0.65)
     ),
-    url("https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=1400&q=80");
+    url("edukasi.avif") no-repeat center center / cover;
 }
 .section-organization {
   background: linear-gradient(
-      rgba(255, 255, 255, 0.45),
-      rgba(255, 255, 255, 0.45)
+      rgba(255, 255, 255, 0.65),
+      rgba(255, 255, 255, 0.65)
     ),
-    url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=80");
+    url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=80")
+      no-repeat center center / cover;
 }
 .section-competency {
   background: linear-gradient(
-      rgba(255, 255, 255, 0.45),
-      rgba(255, 255, 255, 0.45)
+      rgba(255, 255, 255, 0.65),
+      rgba(255, 255, 255, 0.65)
     ),
-    url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1400&q=80");
+    url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1400&q=80")
+      no-repeat center center / cover;
 }
 .content-wrapper {
   position: relative;
@@ -270,7 +262,7 @@ body {
 
 /* --- Frame styling for section content --- */
 .section-frame {
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(255, 255, 255, 0.75);
   border-radius: 26px;
   box-shadow: 0 10px 48px 0 rgba(49, 122, 252, 0.1), 0 1.5px 4px 0 #fff3;
   max-width: 680px;
@@ -477,15 +469,14 @@ body {
   text-decoration: none;
   margin-left: 5px;
   font-weight: 500;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 2px;
   transition: color 0.2s;
   font-size: 1em;
 }
 .footer-ig:hover {
   color: #317afc;
-  /* text-decoration: underline; */
 }
 .footer-ig-icon {
   display: inline-flex;
@@ -497,7 +488,7 @@ body {
 .footer-ig-icon svg {
   width: 1.3em;
   height: 1.3em;
-  display: inline-flex;
+  display: inline-block;
   vertical-align: middle;
 }
 @media (max-width: 600px) {
